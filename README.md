@@ -34,7 +34,7 @@ I was so desperate about that so I discovered a way to use smoothly Intel/NVIDIA
 ## First steps:
 ### (If you have already Fedora 39 KDE, go to next section)
 - Download Fedora 39 KDE Spin from link above,
-- Burn ISO on USB Stick by using [Rufus](rufus.ie), [GNOME Disk Utility](https://gitlab.gnome.org/GNOME/gnome-disk-utility), [Balena Etcher](etcher.balena.io) or anything that can burn ISO on USB,
+- Burn ISO on USB Stick by using [Rufus](https://rufus.ie), [GNOME Disk Utility](https://gitlab.gnome.org/GNOME/gnome-disk-utility), [Balena Etcher](https://etcher.balena.io) or anything that can burn ISO on USB,
 - Reboot your computer, enter Boot Menu and select your USB-ISO drive,
 - Follow the GUI installation of Fedora 39
 -- Your drive should contain a: *EFI Partition (can be new or existing) mounted at /boot/efi mountpoint*, *and main partition (ext4 or brtfs) mounted at  / mountpoint.*
