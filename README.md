@@ -84,6 +84,12 @@ Just enter the ``glxinfo | grep "OpenGL"`` command, if it returns the Intel / Me
 
 ### Now you can use Linux with peace, and new windowing system.
 
+## How to run my apps with dGPU now?
+- In terminal:
+  -- use DRI_PRIME=1 before command (example: ``DRI_PRIME=1 telegram-desktop``)
+- Any app:
+  -- If app offers entering your own Environment Variables, just enter **DRI_PRIME=1** (If using it for Steam, make sure you put **DRI_PRIME=1** before %command%).
+
 ## Known issues
 #### Not everything is perfect, right? 
 -  Cannot wake up from sleep  - "Deadlock" - caused by *Fedora 39's 6.7.X kernel*, we are waiting for next, updated and fixed kernel
