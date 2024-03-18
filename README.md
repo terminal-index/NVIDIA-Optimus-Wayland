@@ -102,5 +102,7 @@ Just enter the ``glxinfo | grep "OpenGL"`` command, if it returns the Intel / Me
 - One Reddit user reported very high power usage with this guide, I'm not clearly sure about it, because my ThinkPad P53 normally runs in on-demand mode and does not have any higher power rate, NVIDIA GPU does not work if I don't need it.
 
 #### Guide created, verified and tested by Karol from Terminal-Index. Star the repo if it helped you solve the X11 issues.
-
+<p>
+  <img src="https://i.imgur.com/jHmBvPX.png" />
+</p>
 Fedora System Logo is the trademark of Red Hat Inc. Top image font is the Bryant Font, made by Eric Oslon. 
