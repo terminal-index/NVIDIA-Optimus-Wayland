@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://i.imgur.com/izi33Tg.png" />
+</p>
+
 # NVIDIA Optimus running smoothly on Wayland - detailed guide.
 
 This guide was written by ThinkPad and Linux passionate.  The only mistake I've ever done in my entire life was buying a laptop with NVIDIA Mobile Graphics Card - I mean, its performance is awesome, but Linux drivers still sucks.
@@ -54,8 +58,9 @@ I was so desperate about that so I discovered a way to use smoothly Intel/NVIDIA
   - **Upgrade your entire system by using** ``sudo dnf upgrade --refresh`` (*MAKE SURE IT UPGRADES/DOWNLOADS THE **intel-media-driver** PACKAGE*), **wait for it to end and reboot.**
   - After reboot, **install newest NVIDIA Drivers**:
    ``sudo dnf install gcc kernel-headers kernel-devel akmod-nvidia xorg-x11-drv-nvidia xorg-x11-drv-nvidia-libs xorg-x11-drv-nvidia-libs.i686 htop``
-   - **Wait for NVIDIA modules to build**, if successfully built, the command ``modinfo -F version nvidia`` should return driver version.
-   -- ***If built, reboot.***
+   - **Wait for NVIDIA modules to build**, if successfully built, the command ``modinfo -F version nvidia`` should return driver version. ***If built, reboot.***
+     #### Why do we need to install htop?
+     Well, htop is not a required package, but it is very useful to monitor if akmod NVIDIA driver is building. If you don't need to monitor that, just don't install htop package.
 
 ## Final steps:
 - **You'll need to edit the */etc/environment* file:**
@@ -82,17 +87,20 @@ and login again to system.
 ## Verify if your laptop is not running always on NVIDIA GPU
 Just enter the ``glxinfo | grep "OpenGL"`` command, if it returns the Intel / Mesa driver, *then you're ready to go.*
 
-### Now you can use Linux with peace, and new windowing system.
-
-## How to run my apps with dGPU now?
-- In terminal:
-  -- use DRI_PRIME=1 before command (example: ``DRI_PRIME=1 telegram-desktop``)
-- Any app:
-  -- If app offers entering your own Environment Variables, just enter **DRI_PRIME=1** (If using it for Steam, make sure you put **DRI_PRIME=1** before %command%).
+## How to run my apps with laptop dGPU now? There are two methods
+#### First option: use DRI_PRIME=1 variable
+- In terminal: use ``DRI_PRIME=1`` before command (example: ``DRI_PRIME=1 telegram-desktop`)
+- Any app:  If app offers entering your own Environment Variables, just enter **DRI_PRIME=1** (If using it for Steam, make sure you put **DRI_PRIME=1** before %command%).
+#### Second option: use ``__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia __GL_SYNC_TO_VBLANK=0`` variable
+- In terminal: use **__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia __GL_SYNC_TO_VBLANK=0** before command (example: ``__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia __GL_SYNC_TO_VBLANK=0 glxgears``)
+- Any app: Enter **__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia __GL_SYNC_TO_VBLANK=0** in Environment Variables (If using Steam, make sure it is put before %command% in app/game launch options).
 
 ## Known issues
 #### Not everything is perfect, right? 
 -  Cannot wake up from sleep  - "Deadlock" - caused by *Fedora 39's 6.7.X kernel*, we are waiting for next, updated and fixed kernel
 - ***You tell me (Open issue if there's something wrong or not working).***
-#
+- One Reddit user reported very high power usage with this guide, I'm not clearly sure about it, because my ThinkPad P53 normally runs in on-demand mode and does not have any higher power rate, NVIDIA GPU does not work if I don't need it.
+
 #### Guide created, verified and tested by Karol from Terminal-Index. Star the repo if it helped you solve the X11 issues.
+
+Fedora System Logo is the trademark of Red Hat Inc. Top image font is the Bryant Font, made by Eric Oslon. 
