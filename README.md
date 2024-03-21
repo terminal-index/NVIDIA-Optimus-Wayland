@@ -100,6 +100,7 @@ Just enter the ``glxinfo | grep "OpenGL"`` command, if it returns the Intel / Me
 -  ~~Cannot wake up from sleep  - "Deadlock" - caused by *Fedora 39's 6.7.X kernel*, we are waiting for next, updated and fixed kernel~~ (Can be bypassed by clicking physical sleep button again)
 - ***You tell me (Open issue if there's something wrong or not working).***
 - ~~One Reddit user reported very high power usage with this guide, I'm not clearly sure about it, because my ThinkPad P53 normally runs in on-demand mode and does not have any higher power rate, NVIDIA GPU does not work if I don't need it.~~ Tested at 21.03.2024, confirmed that this issue does not exist.
+- ~~Long boot time, gets over 1,5 minute~~ Fixed by disabling NetworkManager-wait service.
 
 #### Guide created, verified and tested by Karol from Terminal-Index. Star the repo if it helped you solve the X11 issues.
 <p>
