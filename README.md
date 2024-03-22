@@ -99,7 +99,7 @@ Just enter the ``glxinfo | grep "OpenGL"`` command, if it returns the Intel / Me
 
 ## Known issues
 #### Not everything is perfect, right? 
-- Plasma 6 enabled via solopasha's COPR Repository. It just stutters. Right now finding a way to actually use Plasma 6 already, stay tuned.
+- Plasma 6 enabled via solopasha's COPR Repository. It just stutters. Right now finding a way to actually use Plasma 6 already, stay tuned. (Prodably caused by 60hz monitor, will test it later).
 
 -  ~~Cannot wake up from sleep  - "Deadlock" - caused by *Fedora 39's 6.7.X kernel*, we are waiting for next, updated and fixed kernel~~ (Can be bypassed by clicking physical sleep button again)
 - ***You tell me (Open issue if there's something wrong or not working).***
