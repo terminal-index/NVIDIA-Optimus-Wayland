@@ -4,6 +4,8 @@
 
 # NVIDIA Optimus running smoothly on Wayland - detailed guide.
 
+#### Guide works only on Fedora <=39 KDE Plasma 5.X. Tested on Plasma 6 via solopasha COPR Repository - does not work properly - computer is stuttering and V-Sync is broken. Do NOT install, wait for full Fedora 40 KDE Spin release.
+
 This guide was written by ThinkPad and Linux passionate.  The only mistake I've ever done in my entire life was buying a laptop with NVIDIA Mobile Graphics Card - I mean, its performance is awesome, but Linux drivers still sucks.
 I was so desperate about that so I discovered a way to use smoothly Intel/NVIDIA laptop on Wayland without swapping laptop to one with AMD Graphics Unit (blessing for Linux user).
 ## Results of my guide:
@@ -97,6 +99,8 @@ Just enter the ``glxinfo | grep "OpenGL"`` command, if it returns the Intel / Me
 
 ## Known issues
 #### Not everything is perfect, right? 
+- Plasma 6 enabled via solopasha's COPR Repository. It just stutters. Right now finding a way to actually use Plasma 6 already, stay tuned.
+
 -  ~~Cannot wake up from sleep  - "Deadlock" - caused by *Fedora 39's 6.7.X kernel*, we are waiting for next, updated and fixed kernel~~ (Can be bypassed by clicking physical sleep button again)
 - ***You tell me (Open issue if there's something wrong or not working).***
 - ~~One Reddit user reported very high power usage with this guide, I'm not clearly sure about it, because my ThinkPad P53 normally runs in on-demand mode and does not have any higher power rate, NVIDIA GPU does not work if I don't need it.~~ Tested at 21.03.2024, confirmed that this issue does not exist.
