@@ -100,7 +100,7 @@ Just enter the ``glxinfo | grep "OpenGL"`` command, if it returns the Intel / Me
 ## Known issues
 #### Not everything is perfect, right? 
 - Plasma 6 enabled via solopasha's COPR Repository. It just stutters. Right now finding a way to actually use Plasma 6 already, stay tuned. (Prodably caused by 60hz monitor, will test it later).
-
+- Since NVIDIA's v550.47 driver, system cannot boot normally. Workaround (but considered as issue) - boot without external monitor, then plug it to use it.
 -  ~~Cannot wake up from sleep  - "Deadlock" - caused by *Fedora 39's 6.7.X kernel*, we are waiting for next, updated and fixed kernel~~ (Can be bypassed by clicking physical sleep button again)
 - ***You tell me (Open issue if there's something wrong or not working).***
 - ~~One Reddit user reported very high power usage with this guide, I'm not clearly sure about it, because my ThinkPad P53 normally runs in on-demand mode and does not have any higher power rate, NVIDIA GPU does not work if I don't need it.~~ Tested at 21.03.2024, confirmed that this issue does not exist.
