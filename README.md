@@ -1,3 +1,4 @@
+# Repo will be archived till I'll find a way to optimize NVIDIA Optimus on Wayland Session of KDE Plasma 6 (Fedora 40 Release). The old way does not work.
 <p align="center">
   <img src="https://i.imgur.com/izi33Tg.png" />
 </p>
