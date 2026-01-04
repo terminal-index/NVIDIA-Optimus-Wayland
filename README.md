@@ -39,7 +39,7 @@ Report issues via GitHub.
 
 ## Known issues
 #### Not everything is perfect, right? 
-Actually - none.
+[#2](https://github.com/terminal-index/NVIDIA-Optimus-Wayland/issues/2), but it's fixed. Thanks you for your support!
 
 #### Guide created, verified and tested by Karol from Terminal-Index. Star the repo if it helped you solve the X11 issues.
 <p>
