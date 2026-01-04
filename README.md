@@ -2,6 +2,8 @@
 # NVIDIA Optimus running smoothly on Hyprland
 #### ✨Check out my pre-built Hyprland .config: [Repository](https://github.com/terminal-index/hyprland-dotfiles) ✨
 
+#### ❓ Looking for smooth GNOME experience? Check out the [main](https://github.com/terminal-index/NVIDIA-Optimus-Wayland) branch.
+
 #### Guide works on every Linux distribution with Hyprland. Tested on many distros (mainly Arch and Debian) screens aren't stuttering and V-Sync is working along with VRR on multiple monitors (Thanks to newest NVIDIA driver update 570!)
 
 This guide was written by ThinkPad and Linux passionate.  The only mistake I've ever done in my entire life was buying a laptop with NVIDIA Mobile Graphics Card - I mean, its performance is awesome, ~~but Linux drivers still sucks~~ apparently ever since I've wrote this guide NVIDIA decided to cook with drivers???
