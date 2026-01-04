@@ -1,5 +1,6 @@
 
-# NVIDIA Optimus running smoothly on Wayland - detailed guide.
+# NVIDIA Optimus running smoothly on GNOME Wayland - detailed guide.
+### If you're looking for smooth Hyprland experience, check out our new [Hyprland Branch](https://github.com/terminal-index/NVIDIA-Optimus-Wayland/tree/hyprland)
 
 #### Guide works on every Linux distribution with GNOME 45+. Tested on many distros (Ubuntu, Fedora, Arch, openSUSE) - works as it should work - screens aren't stuttering and V-Sync is working along with VRR on multiple monitors (Thanks to newest NVIDIA driver update 570).
 
