@@ -5,7 +5,7 @@ Name=GNOME NVIDIA
 Comment[en_GB]=This session logs you into GNOME
 Comment[pl]=Ta sesja loguje użytkownika do środowiska GNOME
 Comment=This session logs you into GNOME
-Exec=env __GLX_VENDOR_LIBRARY_NAME="nvidia" DRI_PRIME=1 NVIDIA_DRIVER_CAPABILITIES=all LIBGL_ALWAYS_INDIRECT=1 EGL_VENDOR_LIBRARY_NAME=nvidia VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.x86_64.json GSK_RENDERER=ngl GBM_BACKEND=nvidia LIBGL_LIBRARIES_PATH=/usr/lib64/ __EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/10_nvidia.json /usr/bin/gnome-session
+Exec=env __GLX_VENDOR_LIBRARY_NAME="nvidia" DRI_PRIME=1 NVIDIA_DRIVER_CAPABILITIES=all LIBGL_ALWAYS_INDIRECT=1 EGL_VENDOR_LIBRARY_NAME=nvidia VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.x86_64.json GSK_RENDERER=ngl MUTTER_DEBUG_DISABLE_DIRECT_SCANOUT=1 GBM_BACKEND=nvidia LIBGL_LIBRARIES_PATH=/usr/lib64/ __EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/10_nvidia.json /usr/bin/gnome-session
 TryExec=/usr/bin/gnome-session
 Type=Application
 DesktopNames=GNOME
