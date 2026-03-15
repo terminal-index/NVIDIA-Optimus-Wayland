@@ -11,3 +11,6 @@ Type=Application
 DesktopNames=GNOME
 X-GDM-SessionRegisters=true
 X-GDM-CanRunHeadless=true
+
+# Ensure that VK_ICD_FILENAMES exist in /usr/share/vulkan/icd.d/
+# If not, install drivers properly
