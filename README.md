@@ -2,6 +2,8 @@
 # NVIDIA Optimus running smoothly on GNOME Wayland - detailed guide.
 ### If you're looking for smooth Hyprland experience, check out our new [Hyprland Branch](https://github.com/terminal-index/NVIDIA-Optimus-Wayland/tree/hyprland)
 
+### New implementation for swaywm / wlroots window managers in wlroots branch.
+
 #### Guide works on every Linux distribution with GNOME 45+. Tested on many distros (Ubuntu, Fedora, Arch, openSUSE) - works as it should work - screens aren't stuttering and V-Sync is working along with VRR on multiple monitors (Thanks to newest NVIDIA driver update 570).
 
 This guide was written by ThinkPad and Linux passionate.  The only mistake I've ever done in my entire life was buying a laptop with NVIDIA Mobile Graphics Card - I mean, its performance is awesome, but Linux drivers still sucks.
