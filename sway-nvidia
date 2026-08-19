@@ -1,0 +1,43 @@
+#!/bin/sh
+
+export QT_QPA_PLATFORMTHEME="qtengine"
+export QT_WAYLAND_DISABLE_WINDOWDECORATION="1"
+export QT_AUTO_SCREEN_SCALE_FACTOR="1"
+
+###### Switch to your own GTK cursor theme, and size #
+export XCURSOR_THEME="macOS"
+export XCURSOR_SIZE="16"
+######################################################
+
+export GDK_BACKEND="wayland,x11"
+export QT_QPA_PLATFORM="wayland;xcb"
+export SDL_VIDEODRIVER="wayland,x11,windows"
+export CLUTTER_BACKEND="wayland"
+export ELECTRON_OZONE_PLATFORM_HINT="auto"
+
+export XDG_CURRENT_DESKTOP="sway"
+export XDG_SESSION_TYPE="wayland"
+export XDG_SESSION_DESKTOP="sway"
+
+export _JAVA_AWT_WM_NONREPARENTING="1"
+
+export MOZ_ENABLE_WAYLAND=1
+
+export WLR_NO_HARDWARE_CURSORS=1
+
+export GBM_BACKEND=nvidia-drm
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+export LIBVA_DRIVER_NAME=nvidia
+export VDPAU_DRIVER=nvidia
+export __GL_GSYNC_ALLOWED=1
+export __GL_VRR_ALLOWED=1
+
+export WLR_DRM_DEVICES=/dev/dri/card0:/dev/dri/card1
+export WLR_RENDERER=vulkan
+
+###### This line may be not required in case when youre running OS with systemd. Im using dinit now, so I need it.
+###### Probably safe to remove on systemd.
+export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus" 
+###############################################################
+
+exec sway --unsupported-gpu "$@"
